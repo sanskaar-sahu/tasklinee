@@ -79,7 +79,7 @@ const TaskDetails = () => {
   // -------------------------------
   const handleDelete = async () => {
     try {
-      const url = `${import.meta.env.VITE_API_URL}/tasks/${task._id}`;
+      const url = `${import..VITE_API_URL}/tasks/${task._id}`;
       console.log("DELETE URL:", url);
 
       const res = await fetch(url, {
