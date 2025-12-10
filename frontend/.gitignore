@@ -3,7 +3,4 @@
 
 # React Router
 /.react-router/
-/build/
 
-package.json
-package-lock.json
