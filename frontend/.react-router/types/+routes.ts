@@ -6,6 +6,7 @@ declare module "react-router" {
   interface Register {
     pages: Pages
     routeFiles: RouteFiles
+    routeModules: RouteModules
   }
 }
 
@@ -145,4 +146,26 @@ type RouteFiles = {
     id: "routes/user/profile";
     page: "/user/profile";
   };
+};
+
+type RouteModules = {
+  "root": typeof import("./app/root.tsx");
+  "routes/auth/auth-layout": typeof import("./app/routes/auth/auth-layout.tsx");
+  "routes/root/home": typeof import("./app/routes/root/home.tsx");
+  "routes/auth/sign-in": typeof import("./app/routes/auth/sign-in.tsx");
+  "routes/auth/sign-up": typeof import("./app/routes/auth/sign-up.tsx");
+  "routes/auth/forgot-password": typeof import("./app/routes/auth/forgot-password.tsx");
+  "routes/auth/reset-password": typeof import("./app/routes/auth/reset-password.tsx");
+  "routes/auth/verify-email": typeof import("./app/routes/auth/verify-email.tsx");
+  "routes/dashboard/dashboard-layout": typeof import("./app/routes/dashboard/dashboard-layout.tsx");
+  "routes/dashboard/home": typeof import("./app/routes/dashboard/home.tsx");
+  "routes/dashboard/workspaces/index": typeof import("./app/routes/dashboard/workspaces/index.tsx");
+  "routes/dashboard/workspaces/workspace-details": typeof import("./app/routes/dashboard/workspaces/workspace-details.tsx");
+  "routes/dashboard/project/project-details": typeof import("./app/routes/dashboard/project/project-details.tsx");
+  "routes/dashboard/task/task-details": typeof import("./app/routes/dashboard/task/task-details.tsx");
+  "routes/dashboard/my-tasks": typeof import("./app/routes/dashboard/my-tasks.tsx");
+  "routes/dashboard/members": typeof import("./app/routes/dashboard/members.tsx");
+  "routes/dashboard/workspaces/workspace-invite": typeof import("./app/routes/dashboard/workspaces/workspace-invite.tsx");
+  "routes/user/user-layout": typeof import("./app/routes/user/user-layout.tsx");
+  "routes/user/profile": typeof import("./app/routes/user/profile.tsx");
 };
